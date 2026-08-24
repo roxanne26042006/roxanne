@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="hr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plesna Grupa Roxanne | Službena stranica</title>
+  
+  <!-- Tailwind CSS CDN for instant offline/direct viewing -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cyan: '#06b6d4',
+              teal: '#14b8a6',
+              navy: '#0a192f',
+              dark: '#020617'
+            }
+          },
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Outfit', sans-serif;
+    }
+    .box-glow-cyan {
+      box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.5), 0 0 10px -2px rgba(6, 182, 212, 0.3);
+    }
+    .text-glow-cyan {
+      text-shadow: 0 0 15px rgba(6, 182, 212, 0.6);
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #020617;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #0e4b6e;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #06b6d4;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-cyan-500 selection:text-slate-950 transition-colors duration-300">
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-slate-950/85 backdrop-blur-md border-b border-cyan-900/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="#pocetna" class="flex items-center gap-2.5 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 via-teal-500 to-blue-600 flex items-center justify-center text-slate-950 shadow-[0_0_15px_rgba(6,182,212,0.6)]">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-2xl font-extrabold tracking-wider font-heading bg-gradient-to-r from-cyan-400 via-teal-300 to-sky-400 bg-clip-text text-transparent">
+              ROXANNE
+            </span>
+            <span class="text-[10px] uppercase tracking-[0.25em] text-cyan-400/90 font-semibold -mt-1">
+              Plesna Grupa
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-sm font-medium">
+          <a href="#pocetna" class="px-3.5 py-2 rounded-lg text-cyan-300 bg-cyan-950/60 border border-cyan-500/40">Početna</a>
+          <a href="#o-nama" class="px-3.5 py-2 rounded-lg text-slate-300 hover:text-cyan-300 hover:bg-slate-900/60 transition">O nama</a>
+          <a href="#programi" class="px-3.5 py-2 rounded-lg text-slate-300 hover:text-cyan-300 hover:bg-slate-900/60 transition">Programi</a>
+          <a href="#raspored" class="px-3.5 py-2 rounded-lg text-slate-300 hover:text-cyan-300 hover:bg-slate-900/60 transition">Raspored</a>
+          <a href="#galerija" class="px-3.5 py-2 rounded-lg text-slate-300 hover:text-cyan-300 hover:bg-slate-900/60 transition">Galerija</a>
+          <a href="#upisi" class="px-3.5 py-2 rounded-lg text-slate-300 hover:text-cyan-300 hover:bg-slate-900/60 transition">Upisi</a>
+          <a href="#kontakt" class="px-3.5 py-2 rounded-lg text-slate-300 hover:text-cyan-300 hover:bg-slate-900/60 transition">Kontakt</a>
+        </nav>
+
+        <!-- Actions -->
+        <div class="hidden sm:flex items-center gap-3">
+          <button id="theme-toggle" class="p-2.5 rounded-xl border border-slate-700 bg-slate-900/80 text-yellow-400 hover:border-cyan-400 transition" title="Promijeni temu">
+            <svg id="sun-icon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+            <svg id="moon-icon" class="w-4 h-4 hidden text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          </button>
+
+          <a href="#upisi" class="px-5 py-2.5 rounded-xl font-bold text-sm text-slate-950 bg-gradient-to-r from-cyan-400 to-teal-400 hover:from-cyan-300 hover:to-teal-300 shadow-[0_0_20px_rgba(6,182,212,0.5)] transition flex items-center gap-2 transform hover:-translate-y-0.5">
+            <span>Upisi 2026/27</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-slate-300 hover:text-cyan-400">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile menu panel -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-slate-950/95 border-b border-cyan-900/60 px-4 py-4 space-y-2">
+      <a href="#pocetna" class="block px-3 py-2 rounded-lg text-cyan-300 font-medium">Početna</a>
+      <a href="#o-nama" class="block px-3 py-2 rounded-lg text-slate-300 hover:text-white">O nama</a>
+      <a href="#programi" class="block px-3 py-2 rounded-lg text-slate-300 hover:text-white">Programi</a>
+      <a href="#raspored" class="block px-3 py-2 rounded-lg text-slate-300 hover:text-white">Raspored</a>
+      <a href="#galerija" class="block px-3 py-2 rounded-lg text-slate-300 hover:text-white">Galerija</a>
+      <a href="#upisi" class="block px-3 py-2 rounded-lg text-slate-300 hover:text-white">Upisi</a>
+      <a href="#kontakt" class="block px-3 py-2 rounded-lg text-slate-300 hover:text-white">Kontakt</a>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION & PARTICLE DANCER CANVAS ==================== -->
+  <section id="pocetna" class="relative min-h-[92vh] flex items-center justify-center pt-24 pb-16 overflow-hidden">
+    <!-- Particle Dancer Canvas -->
+    <canvas id="dancerCanvas" class="absolute inset-0 w-full h-full cursor-crosshair z-0"></canvas>
+    
+    <!-- Gradient overlay for legibility -->
+    <div class="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/70 to-slate-950/30 lg:from-slate-950/90 lg:via-slate-950/55 lg:to-transparent pointer-events-none z-0"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/80 border border-cyan-400/40 text-cyan-300 text-xs font-semibold backdrop-blur-md shadow-[0_0_15px_rgba(6,182,212,0.3)]">
+            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+            <span>Otvoreni upisi za novu plesnu sezonu 2026/2027.</span>
+            <span class="text-white font-normal">• Prvi sat je besplatan!</span>
+          </div>
+
+          <div class="space-y-3">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black font-heading leading-tight">
+              <span class="block text-white">Osjeti ritam.</span>
+              <span class="block bg-gradient-to-r from-cyan-400 via-teal-300 to-sky-400 bg-clip-text text-transparent text-glow-cyan">
+                Izrazi se kroz pokret.
+              </span>
+              <span class="block text-white text-3xl sm:text-4xl mt-1">
+                Plesna grupa <span class="underline decoration-cyan-400 decoration-wavy decoration-2">Roxanne</span>
+              </span>
+            </h1>
+            <p class="text-base sm:text-lg text-slate-300 max-w-2xl font-normal leading-relaxed">
+              Vodeći plesni studio suvremenog, jazz i urbanog plesa za djecu, mlade i odrasle. Pronađi svoju strast, usavrši tehniku i zapleši s nama na prestižnim pozornicama!
+            </p>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#upisi" class="px-7 py-3.5 rounded-xl font-bold text-base text-slate-950 bg-gradient-to-r from-cyan-400 via-teal-400 to-cyan-300 hover:from-cyan-300 hover:to-teal-300 shadow-[0_0_25px_rgba(6,182,212,0.6)] transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+              <span>Upiši se na besplatni sat</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+
+            <button onclick="openVideoModal()" class="px-6 py-3.5 rounded-xl font-semibold text-base bg-slate-900/80 border border-cyan-500/40 text-cyan-300 hover:bg-cyan-950/60 hover:text-white transition flex items-center gap-2.5 backdrop-blur-md cursor-pointer">
+              <div class="w-7 h-7 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400">
+                <svg class="w-4 h-4 fill-current ml-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <span>Video nastupi</span>
+            </button>
+          </div>
+
+          <!-- Stats -->
+          <div class="pt-6 border-t border-cyan-900/30 grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div>
+              <div class="text-2xl sm:text-3xl font-black text-cyan-400 font-heading">16+</div>
+              <div class="text-xs text-slate-400">Godina tradicije</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-black text-teal-400 font-heading">120+</div>
+              <div class="text-xs text-slate-400">Osvojenih medalja</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-black text-sky-400 font-heading">350+</div>
+              <div class="text-xs text-slate-400">Aktivnih članova</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-black text-cyan-300 font-heading">6</div>
+              <div class="text-xs text-slate-400">Plesnih programa</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== O NAMA / ABOUT US ==================== -->
+  <section id="o-nama" class="py-24 relative bg-slate-900/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-950/70 border border-cyan-500/40 text-cyan-400 text-xs font-semibold">
+          ✦ O nama & Naša vizija
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading">
+          Više od plesnog kluba — <br>
+          <span class="bg-gradient-to-r from-cyan-400 via-teal-300 to-sky-400 bg-clip-text text-transparent">mi smo Roxanne obitelj</span>
+        </h2>
+        <p class="text-base text-slate-300">
+          Osnovani 2008. godine s vizijom stvaranja mjesta u kojem svaki plesač razvija tehničku izvrsnost, samopouzdanje i ljubav prema umjetnosti pokreta.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-cyan-500/50 transition">
+          <div class="w-12 h-12 rounded-xl bg-cyan-950 text-cyan-400 border border-cyan-800 flex items-center justify-center font-bold text-xl mb-4">♥</div>
+          <h3 class="text-lg font-bold text-white mb-2">Strast prema plesu</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Ples je jezik emocija i slobodnog izražavanja kroz koji svaki član gradi jedinstveni stil.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-teal-500/50 transition">
+          <div class="w-12 h-12 rounded-xl bg-teal-950 text-teal-400 border border-teal-800 flex items-center justify-center font-bold text-xl mb-4">★</div>
+          <h3 class="text-lg font-bold text-white mb-2">Stručni pedagozi</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Diplomirani plesni treneri s dugogodišnjim iskustvom rada s djecom, mladima i natjecateljima.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-sky-500/50 transition">
+          <div class="w-12 h-12 rounded-xl bg-sky-950 text-sky-400 border border-sky-800 flex items-center justify-center font-bold text-xl mb-4">👥</div>
+          <h3 class="text-lg font-bold text-white mb-2">Prijateljstvo i tim</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Zajedništvo, putovanja i uzajamna podrška čine naš studio drugim domom za sve plesače.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-blue-500/50 transition">
+          <div class="w-12 h-12 rounded-xl bg-blue-950 text-blue-400 border border-blue-800 flex items-center justify-center font-bold text-xl mb-4">🏆</div>
+          <h3 class="text-lg font-bold text-white mb-2">Priznanja & Medalje</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Brojna zlata na DanceStar Svjetskim prvenstvima, ESDU i Državnim natjecanjima.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROGRAMI / DANCE PROGRAMS ==================== -->
+  <section id="programi" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-14">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-950/70 border border-cyan-500/40 text-cyan-400 text-xs font-semibold">
+          ✦ Plesni stilovi za sve uzraste
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading">
+          Pronađi svoj plesni smjer u <span class="text-cyan-400">Roxanne</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Program 1 -->
+        <div class="rounded-3xl overflow-hidden bg-slate-900/90 border border-slate-800 hover:border-cyan-400/60 transition group hover:-translate-y-1">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=800&q=80" alt="Suvremeni ples" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent"></div>
+            <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold bg-slate-950/80 text-cyan-300 border border-cyan-500/40">Suvremeni & Lyrical</span>
+          </div>
+          <div class="p-6 space-y-4">
+            <h3 class="text-xl font-bold text-white">Suvremeni Ples & Lyrical</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">Fuzija floorwork tehnike, skokova i lirske ekspresije. Razvijamo fluidnost, elastičnost i scensku prisutnost.</p>
+            <div class="pt-3 border-t border-slate-800 flex items-center justify-between">
+              <div>
+                <div class="text-[10px] text-slate-400">Članarina</div>
+                <div class="text-xl font-bold text-cyan-400 font-heading">45 € <span class="text-xs text-slate-400">/mj.</span></div>
+              </div>
+              <a href="#upisi" class="px-4 py-2 rounded-xl text-xs font-bold bg-cyan-400 text-slate-950 hover:bg-cyan-300 transition">Upiši program</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Program 2 -->
+        <div class="rounded-3xl overflow-hidden bg-slate-900/90 border border-slate-800 hover:border-cyan-400/60 transition group hover:-translate-y-1">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?auto=format&fit=crop&w=800&q=80" alt="Jazz Dance" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent"></div>
+            <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold bg-slate-950/80 text-teal-300 border border-teal-500/40">Modern Jazz</span>
+          </div>
+          <div class="p-6 space-y-4">
+            <h3 class="text-xl font-bold text-white">Modern Jazz & Broadway</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">Eksplozivni skokovi, tehnički okreti (piruete), precizna izolacija tijela i snažna ritmika uz moderne hitove.</p>
+            <div class="pt-3 border-t border-slate-800 flex items-center justify-between">
+              <div>
+                <div class="text-[10px] text-slate-400">Članarina</div>
+                <div class="text-xl font-bold text-teal-400 font-heading">40 € <span class="text-xs text-slate-400">/mj.</span></div>
+              </div>
+              <a href="#upisi" class="px-4 py-2 rounded-xl text-xs font-bold bg-cyan-400 text-slate-950 hover:bg-cyan-300 transition">Upiši program</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Program 3 -->
+        <div class="rounded-3xl overflow-hidden bg-slate-900/90 border border-slate-800 hover:border-cyan-400/60 transition group hover:-translate-y-1">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1535525153412-5a42439a210d?auto=format&fit=crop&w=800&q=80" alt="Hip Hop" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent"></div>
+            <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold bg-slate-950/80 text-sky-300 border border-sky-500/40">Urban & Hip Hop</span>
+          </div>
+          <div class="p-6 space-y-4">
+            <h3 class="text-xl font-bold text-white">Hip Hop & Urban Fusion</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">Groove, freestyle krugovi, locking, popping i atraktivne koreografije uz najnovije urbane beatove.</p>
+            <div class="pt-3 border-t border-slate-800 flex items-center justify-between">
+              <div>
+                <div class="text-[10px] text-slate-400">Članarina</div>
+                <div class="text-xl font-bold text-sky-400 font-heading">40 € <span class="text-xs text-slate-400">/mj.</span></div>
+              </div>
+              <a href="#upisi" class="px-4 py-2 rounded-xl text-xs font-bold bg-cyan-400 text-slate-950 hover:bg-cyan-300 transition">Upiši program</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RASPORED / SCHEDULE ==================== -->
+  <section id="raspored" class="py-24 bg-slate-900/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-950/70 border border-cyan-500/40 text-cyan-400 text-xs font-semibold">
+          ✦ Tjedni termini treninga
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-black font-heading">Raspored za sezonu 2026/2027</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+          <div class="text-cyan-400 font-bold text-xs uppercase mb-2">Ponedjeljak & Srijeda</div>
+          <div class="space-y-3 text-sm">
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+              <div class="font-bold text-white">17:00 - 17:50</div>
+              <div class="text-xs text-cyan-300">Mini Roxanne (Djeca 4-8 god.)</div>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+              <div class="font-bold text-white">18:00 - 19:15</div>
+              <div class="text-xs text-teal-300">Hip Hop & Urban Fusion</div>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+              <div class="font-bold text-white">19:30 - 21:00</div>
+              <div class="text-xs text-sky-300">Suvremeni Ples (Napredni)</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+          <div class="text-cyan-400 font-bold text-xs uppercase mb-2">Utorak & Četvrtak</div>
+          <div class="space-y-3 text-sm">
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+              <div class="font-bold text-white">18:00 - 19:15</div>
+              <div class="text-xs text-cyan-300">Modern Jazz & Broadway</div>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+              <div class="font-bold text-white">19:30 - 20:45</div>
+              <div class="text-xs text-teal-300">MTV Commercial & Show Dance</div>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+              <div class="font-bold text-white">20:45 - 22:00</div>
+              <div class="text-xs text-sky-300">Competition Elite Team</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+          <div class="text-cyan-400 font-bold text-xs uppercase mb-2">Petak & Subota</div>
+          <div class="space-y-3 text-sm">
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+              <div class="font-bold text-white">Petak 18:00 - 20:00</div>
+              <div class="text-xs text-cyan-300">Freestyle & Acro Masterclass</div>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+              <div class="font-bold text-white">Subota 10:00 - 11:30</div>
+              <div class="text-xs text-teal-300">Vikend plesni intenziv</div>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+              <div class="font-bold text-white">Subota 11:30 - 14:00</div>
+              <div class="text-xs text-sky-300">Pripreme za natjecanja</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== UPISI / ENROLLMENT ==================== -->
+  <section id="upisi" class="py-24 relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center space-y-4 mb-12">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-950/70 border border-cyan-500/40 text-cyan-400 text-xs font-semibold">
+          ✦ Online Prijavnica
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-black font-heading">
+          Upiši se u plesnu grupu <span class="text-cyan-400">Roxanne</span>
+        </h2>
+        <p class="text-sm text-slate-300">Prvi probni sat je besplatan za sve nove članove!</p>
+      </div>
+
+      <div class="p-8 sm:p-10 rounded-3xl bg-slate-900/90 border border-cyan-500/40 backdrop-blur-xl shadow-2xl">
+        <form id="enrollmentForm" onsubmit="handleEnroll(event)" class="space-y-6">
+          <div id="enrollSuccess" class="hidden p-4 rounded-xl bg-teal-950 border border-teal-500 text-teal-200 text-sm">
+            🎉 <strong>Prijava uspješno poslana!</strong> Poslali smo vam potvrdu na email. Vidimo se u dvorani!
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold uppercase text-slate-300 mb-1">Ime i prezime *</label>
+              <input type="text" required placeholder="Npr. Ana Marić" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white text-sm focus:border-cyan-400 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase text-slate-300 mb-1">Dob (godine) *</label>
+              <input type="number" required placeholder="Npr. 14" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white text-sm focus:border-cyan-400 focus:outline-none">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold uppercase text-slate-300 mb-1">E-mail adresa *</label>
+              <input type="email" required placeholder="adresa@email.com" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white text-sm focus:border-cyan-400 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase text-slate-300 mb-1">Broj telefona *</label>
+              <input type="tel" required placeholder="+385 91 234 5678" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white text-sm focus:border-cyan-400 focus:outline-none">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase text-slate-300 mb-1">Odaberi plesni program</label>
+            <select class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white text-sm focus:border-cyan-400 focus:outline-none">
+              <option>Suvremeni Ples & Lyrical (45 €/mj.)</option>
+              <option>Modern Jazz & Broadway (40 €/mj.)</option>
+              <option>Hip Hop & Urban Fusion (40 €/mj.)</option>
+              <option>MTV Commercial & Show Dance (38 €/mj.)</option>
+              <option>Mini Roxanne za djecu (35 €/mj.)</option>
+              <option>Natjecateljski Elite Team (Audicija)</option>
+            </select>
+          </div>
+
+          <button type="submit" class="w-full py-4 rounded-xl font-bold text-base text-slate-950 bg-gradient-to-r from-cyan-400 via-teal-400 to-cyan-300 hover:from-cyan-300 hover:to-teal-300 shadow-[0_0_20px_rgba(6,182,212,0.6)] transition cursor-pointer">
+            Pošalji prijavu za upis
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== KONTAKT / CONTACT ==================== -->
+  <section id="kontakt" class="py-24 bg-slate-900/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-14">
+        <h2 class="text-3xl sm:text-4xl font-black font-heading">Kontaktirajte nas</h2>
+        <p class="text-sm text-slate-400">Adresa: Glavna plesna avenija 14, 10000 Zagreb | Tel: +385 (0)91 234 5678</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-slate-950 border-t border-cyan-900/40 text-slate-400 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div>
+        <div class="font-bold text-white text-lg font-heading">Plesna Grupa ROXANNE</div>
+        <div class="text-xs">© 2026 Sva prava pridržana.</div>
+      </div>
+
+      <!-- Social Links (Facebook, Instagram, YouTube) -->
+      <div class="flex items-center gap-4">
+        <!-- Facebook -->
+        <a href="https://facebook.com" target="_blank" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-cyan-400 flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:shadow-[0_0_15px_rgba(6,182,212,0.6)] transition">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <!-- Instagram -->
+        <a href="https://instagram.com" target="_blank" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-cyan-400 flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:shadow-[0_0_15px_rgba(6,182,212,0.6)] transition">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <!-- YouTube -->
+        <a href="https://youtube.com" target="_blank" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-cyan-400 flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:shadow-[0_0_15px_rgba(6,182,212,0.6)] transition">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== PARTICLE DANCER CANVAS ENGINE SCRIPT ==================== -->
+  <script>
+    // Advanced Volumetric Particle Dancer Engine
+    const canvas = document.getElementById('dancerCanvas');
+    const ctx = canvas.getContext('2d');
+    let width, height;
+
+    function resize() {
+      width = canvas.width = canvas.parentElement.clientWidth || window.innerWidth;
+      height = canvas.height = canvas.parentElement.clientHeight || window.innerHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    // 5 Master Classical & Contemporary Dance Choreography Keyframes
+    const dancePoses = [
+      // 1. Grand Jeté (Veličanstveni baletni let u zraku - split skok)
+      {
+        head: { x: 15, y: -210, z: 10 },
+        neck: { x: 8, y: -180, z: 5 },
+        chest: { x: 0, y: -140, z: 0 },
+        waist: { x: -5, y: -95, z: 0 },
+        pelvis: { x: -10, y: -50, z: 0 },
+        leftShoulder: { x: -35, y: -160, z: -20 },
+        leftElbow: { x: -80, y: -195, z: -35 },
+        leftWrist: { x: -130, y: -230, z: -45 },
+        leftHand: { x: -155, y: -245, z: -50 },
+        rightShoulder: { x: 35, y: -155, z: 20 },
+        rightElbow: { x: 85, y: -190, z: 30 },
+        rightWrist: { x: 135, y: -225, z: 40 },
+        rightHand: { x: 160, y: -240, z: 45 },
+        leftHip: { x: -25, y: -45, z: -15 },
+        leftKnee: { x: -95, y: 10, z: -10 },
+        leftAnkle: { x: -170, y: 60, z: -5 },
+        leftToe: { x: -205, y: 80, z: 0 },
+        rightHip: { x: 15, y: -50, z: 15 },
+        rightKnee: { x: 85, y: -15, z: 10 },
+        rightAnkle: { x: 165, y: 15, z: 5 },
+        rightToe: { x: 200, y: 30, z: 0 },
+        hairBack: { x: 35, y: -230, z: -25 }
+      },
+      // 2. Arabesque Penchée / Pirouette (Graciozna linija na prstima)
+      {
+        head: { x: -25, y: -175, z: 15 },
+        neck: { x: -18, y: -150, z: 10 },
+        chest: { x: -8, y: -115, z: 5 },
+        waist: { x: 0, y: -70, z: 0 },
+        pelvis: { x: 8, y: -25, z: -5 },
+        leftShoulder: { x: -38, y: -130, z: -15 },
+        leftElbow: { x: -90, y: -145, z: -25 },
+        leftWrist: { x: -145, y: -160, z: -35 },
+        leftHand: { x: -170, y: -165, z: -40 },
+        rightShoulder: { x: 28, y: -125, z: 20 },
+        rightElbow: { x: 75, y: -110, z: 35 },
+        rightWrist: { x: 125, y: -90, z: 45 },
+        rightHand: { x: 150, y: -75, z: 50 },
+        leftHip: { x: -15, y: -20, z: -10 },
+        leftKnee: { x: -10, y: 65, z: -5 },
+        leftAnkle: { x: -5, y: 155, z: 0 },
+        leftToe: { x: -5, y: 195, z: 0 },
+        rightHip: { x: 22, y: -25, z: 10 },
+        rightKnee: { x: 90, y: -15, z: -15 },
+        rightAnkle: { x: 165, y: -10, z: -35 },
+        rightToe: { x: 205, y: -5, z: -45 },
+        hairBack: { x: -50, y: -190, z: 30 }
+      },
+      // 3. Contemporary Spiral & Attitude Turn (Spirala i okret)
+      {
+        head: { x: 20, y: -185, z: -15 },
+        neck: { x: 12, y: -155, z: -10 },
+        chest: { x: 5, y: -115, z: -5 },
+        waist: { x: -5, y: -70, z: 0 },
+        pelvis: { x: -10, y: -20, z: 5 },
+        leftShoulder: { x: -28, y: -135, z: -25 },
+        leftElbow: { x: -65, y: -175, z: 15 },
+        leftWrist: { x: -50, y: -225, z: 50 },
+        leftHand: { x: -35, y: -245, z: 65 },
+        rightShoulder: { x: 38, y: -130, z: 15 },
+        rightElbow: { x: 85, y: -100, z: 35 },
+        rightWrist: { x: 125, y: -70, z: 45 },
+        rightHand: { x: 145, y: -50, z: 50 },
+        leftHip: { x: -20, y: -15, z: -10 },
+        leftKnee: { x: -15, y: 70, z: 0 },
+        leftAnkle: { x: -10, y: 160, z: 5 },
+        leftToe: { x: -8, y: 200, z: 8 },
+        rightHip: { x: 15, y: -18, z: 15 },
+        rightKnee: { x: 65, y: -45, z: 35 },
+        rightAnkle: { x: 35, y: -5, z: 60 },
+        rightToe: { x: 15, y: 25, z: 75 },
+        hairBack: { x: 45, y: -195, z: -35 }
+      },
+      // 4. Lyrical Cambré Backbend (Emotivni luk unazad)
+      {
+        head: { x: 45, y: -160, z: -35 },
+        neck: { x: 25, y: -140, z: -20 },
+        chest: { x: 0, y: -105, z: -5 },
+        waist: { x: -15, y: -65, z: 0 },
+        pelvis: { x: -25, y: -15, z: 5 },
+        leftShoulder: { x: -30, y: -125, z: -25 },
+        leftElbow: { x: -75, y: -155, z: -15 },
+        leftWrist: { x: -115, y: -195, z: 10 },
+        leftHand: { x: -135, y: -215, z: 25 },
+        rightShoulder: { x: 32, y: -120, z: 20 },
+        rightElbow: { x: 85, y: -160, z: -15 },
+        rightWrist: { x: 135, y: -200, z: -45 },
+        rightHand: { x: 155, y: -220, z: -60 },
+        leftHip: { x: -25, y: -10, z: -10 },
+        leftKnee: { x: -45, y: 70, z: -5 },
+        leftAnkle: { x: -50, y: 160, z: 0 },
+        leftToe: { x: -50, y: 200, z: 5 },
+        rightHip: { x: 10, y: -15, z: 15 },
+        rightKnee: { x: 40, y: 65, z: 20 },
+        rightAnkle: { x: 70, y: 155, z: 30 },
+        rightToe: { x: 90, y: 195, z: 35 },
+        hairBack: { x: 75, y: -145, z: -55 }
+      },
+      // 5. Grand Développé à la Seconde (Visoka bočna ekstenzija)
+      {
+        head: { x: 0, y: -200, z: 0 },
+        neck: { x: 0, y: -170, z: 0 },
+        chest: { x: 0, y: -130, z: 0 },
+        waist: { x: 2, y: -85, z: 0 },
+        pelvis: { x: 5, y: -40, z: 0 },
+        leftShoulder: { x: -35, y: -145, z: -15 },
+        leftElbow: { x: -70, y: -180, z: -10 },
+        leftWrist: { x: -65, y: -230, z: 10 },
+        leftHand: { x: -55, y: -255, z: 20 },
+        rightShoulder: { x: 35, y: -145, z: 15 },
+        rightElbow: { x: 80, y: -150, z: 20 },
+        rightWrist: { x: 125, y: -155, z: 25 },
+        rightHand: { x: 150, y: -160, z: 30 },
+        leftHip: { x: -18, y: -35, z: -10 },
+        leftKnee: { x: -15, y: 55, z: -5 },
+        leftAnkle: { x: -10, y: 155, z: 0 },
+        leftToe: { x: -8, y: 195, z: 0 },
+        rightHip: { x: 20, y: -38, z: 10 },
+        rightKnee: { x: 95, y: -70, z: 15 },
+        rightAnkle: { x: 155, y: -125, z: 20 },
+        rightToe: { x: 190, y: -160, z: 25 },
+        hairBack: { x: -10, y: -220, z: -25 }
+      }
+    ];
+
+    // Build anatomical particle distribution specs (Volumetric Silhouette)
+    // Total ~2,100 high-density particles
+    const TOTAL_PARTICLES = 2100;
+    const particles = [];
+
+    // Assign anatomical roles to particles
+    for (let i = 0; i < TOTAL_PARTICLES; i++) {
+      let role = 'torso';
+      if (i < 130) role = 'head';
+      else if (i < 270) role = 'hair';
+      else if (i < 340) role = 'neck_shoulders';
+      else if (i < 680) role = 'torso_waist';
+      else if (i < 1180) role = 'skirt_chiffon';
+      else if (i < 1380) role = 'arm_left';
+      else if (i < 1580) role = 'arm_right';
+      else if (i < 1820) role = 'leg_left';
+      else if (i < 2040) role = 'leg_right';
+      else role = 'sparkles';
+
+      particles.push({
+        role: role,
+        index: i,
+        x: width / 2,
+        y: height / 2,
+        targetX: width / 2,
+        targetY: height / 2,
+        vx: 0,
+        vy: 0,
+        baseRadius: Math.random() * 1.6 + 0.8,
+        alpha: Math.random() * 0.5 + 0.5,
+        hue: 175 + (i % 35),
+        subIndex: i,
+        phase: Math.random() * Math.PI * 2
+      });
+    }
+
+    // Dynamic hair strands physics simulation nodes
+    const hairNodes = [
+      { x: 0, y: 0, z: 0, vx: 0, vy: 0, vz: 0 },
+      { x: 0, y: 0, z: 0, vx: 0, vy: 0, vz: 0 },
+      { x: 0, y: 0, z: 0, vx: 0, vy: 0, vz: 0 },
+      { x: 0, y: 0, z: 0, vx: 0, vy: 0, vz: 0 }
+    ];
+
+    let progress = 0;
+    let rotation = 0;
+    let mouse = { x: -1000, y: -1000, active: false };
+
+    window.addEventListener('mousemove', e => {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+      mouse.active = true;
+    });
+    window.addEventListener('mouseleave', () => {
+      mouse.active = false;
+    });
+
+    // Helper: Interpolate 3D Point
+    function lerp3D(pA, pB, t) {
+      return {
+        x: pA.x + (pB.x - pA.x) * t,
+        y: pA.y + (pB.y - pA.y) * t,
+        z: pA.z + (pB.z - pA.z) * t
+      };
+    }
+
+    // Helper: Sample point along limb with anatomical volume radius
+    function sampleLimb(p1, p2, t, radiusX, radiusZ, angle) {
+      const bx = p1.x + (p2.x - p1.x) * t;
+      const by = p1.y + (p2.y - p1.y) * t;
+      const bz = p1.z + (p2.z - p1.z) * t;
+      return {
+        x: bx + Math.cos(angle) * radiusX,
+        y: by,
+        z: bz + Math.sin(angle) * radiusZ
+      };
+    }
+
+    function render() {
+      ctx.clearRect(0, 0, width, height);
+
+      progress += 0.0055;
+      rotation += 0.0045;
+
+      const totalPoses = dancePoses.length;
+      const cycle = progress % totalPoses;
+      const cur = Math.floor(cycle);
+      const next = (cur + 1) % totalPoses;
+      const t = cycle - cur;
+      // Smooth cosine easing
+      const ease = 0.5 - 0.5 * Math.cos(t * Math.PI);
+
+      const poseA = dancePoses[cur];
+      const poseB = dancePoses[next];
+
+      // Interpolate current pose landmarks in 3D
+      const curPose = {};
+      for (const k in poseA) {
+        curPose[k] = lerp3D(poseA[k], poseB[k], ease);
+      }
+
+      // Dynamic hair physics
+      const hairTarget = curPose.hairBack || { x: curPose.head.x + 20, y: curPose.head.y - 20, z: curPose.head.z - 20 };
+      hairNodes[0].x = curPose.head.x;
+      hairNodes[0].y = curPose.head.y - 12;
+      hairNodes[0].z = curPose.head.z;
+
+      for (let h = 1; h < hairNodes.length; h++) {
+        const prev = hairNodes[h - 1];
+        const curH = hairNodes[h];
+        const targetX = prev.x + (hairTarget.x - curPose.head.x) * (h / hairNodes.length) + Math.sin(progress * 4 + h) * 12;
+        const targetY = prev.y + (hairTarget.y - curPose.head.y) * (h / hairNodes.length) + Math.cos(progress * 3 + h) * 8;
+        const targetZ = prev.z + (hairTarget.z - curPose.head.z) * (h / hairNodes.length);
+
+        curH.x += (targetX - curH.x) * 0.25;
+        curH.y += (targetY - curH.y) * 0.25;
+        curH.z += (targetZ - curH.z) * 0.25;
+      }
+
+      // Projection setup
+      const isMobile = width < 768;
+      const scale = isMobile ? Math.min(width, height) * 0.00165 : Math.min(width, height) * 0.00205;
+      const cx = isMobile ? width * 0.5 : width * 0.62;
+      const cy = height * 0.53;
+
+      function project(pt3D) {
+        const cosR = Math.cos(rotation);
+        const sinR = Math.sin(rotation);
+        const rx = pt3D.x * cosR - pt3D.z * sinR;
+        const rz = pt3D.x * sinR + pt3D.z * cosR;
+        const ry = pt3D.y;
+
+        const fov = 750;
+        const depth = fov / (fov + rz * scale);
+        return {
+          x: cx + rx * scale * depth,
+          y: cy + ry * scale * depth,
+          depth: depth,
+          rz: rz
+        };
+      }
+
+      // Generate target positions for all anatomical particles
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i];
+        let pt3D = { x: 0, y: 0, z: 0 };
+        let pointWeight = 1.0;
+
+        if (p.role === 'head') {
+          // Delicate female head & facial ellipsoid (chin taper, cheekbones)
+          const hIdx = p.index;
+          const u = (hIdx / 130);
+          const theta = u * Math.PI * 2 * 6.5;
+          const phi = (u - 0.5) * Math.PI * 0.9;
+          const rx = 10 * Math.cos(phi);
+          const ry = 14;
+          const rz = 10 * Math.cos(phi);
+          const chinTaper = phi > 0.2 ? 0.75 : 1.0;
+
+          pt3D = {
+            x: curPose.head.x + Math.cos(theta) * rx * chinTaper,
+            y: curPose.head.y + Math.sin(phi) * ry,
+            z: curPose.head.z + Math.sin(theta) * rz * chinTaper
+          };
+        } else if (p.role === 'hair') {
+          // Graceful flowing hair strands / ponytail swaying in 3D
+          const hIdx = p.index - 130;
+          const strand = hIdx % hairNodes.length;
+          const node = hairNodes[strand];
+          const spread = Math.sin(hIdx * 3.7) * 8;
+          const spreadY = Math.cos(hIdx * 2.3) * 6;
+
+          pt3D = {
+            x: node.x + Math.cos(hIdx) * spread,
+            y: node.y + spreadY + (hIdx * 0.15),
+            z: node.z + Math.sin(hIdx) * spread
+          };
+        } else if (p.role === 'neck_shoulders') {
+          // Slender neck & graceful clavicle line
+          const nIdx = p.index - 270;
+          if (nIdx < 35) {
+            const st = nIdx / 35;
+            const angle = nIdx * 2.4;
+            pt3D = sampleLimb(curPose.head, curPose.neck, st, 5.5, 5.5, angle);
+          } else {
+            const st = (nIdx - 35) / 35;
+            const side = (nIdx % 2 === 0) ? curPose.leftShoulder : curPose.rightShoulder;
+            const angle = nIdx * 2.8;
+            pt3D = sampleLimb(curPose.neck, side, st, 6.0, 5.0, angle);
+          }
+        } else if (p.role === 'torso_waist') {
+          // Feminine hourglass torso: chest bust -> narrow waist -> hips
+          const tIdx = p.index - 340;
+          const st = tIdx / 340;
+          const angle = (tIdx * 2.39996) + progress * 2;
+          
+          // Hourglass radius profile
+          let rx = 16;
+          let rz = 12;
+          if (st < 0.35) {
+            // Chest / bust
+            rx = 18 - st * 8;
+            rz = 14 - st * 6;
+          } else if (st < 0.7) {
+            // Slender waist
+            rx = 12 + (st - 0.35) * 14;
+            rz = 9 + (st - 0.35) * 11;
+          } else {
+            // Hips & pelvis
+            rx = 18 + (st - 0.7) * 8;
+            rz = 14 + (st - 0.7) * 6;
+          }
+
+          // Interpolate along spine (chest -> waist -> pelvis)
+          let basePt;
+          if (st < 0.5) {
+            basePt = lerp3D(curPose.chest, curPose.waist, st * 2);
+          } else {
+            basePt = lerp3D(curPose.waist, curPose.pelvis, (st - 0.5) * 2);
+          }
+
+          pt3D = {
+            x: basePt.x + Math.cos(angle) * rx,
+            y: basePt.y,
+            z: basePt.z + Math.sin(angle) * rz
+          };
+        } else if (p.role === 'skirt_chiffon') {
+          // Dynamic flowing chiffon dance skirt billowing with spin momentum
+          const sIdx = p.index - 680;
+          const tier = (sIdx % 8);
+          const tierFrac = tier / 8;
+          const angle = (sIdx / 500) * Math.PI * 2 * 6 + rotation * 2.8;
+          
+          const baseRadius = 22 + tierFrac * 45;
+          const waveRipple = Math.sin(angle * 4 + progress * 4) * 8 + Math.cos(tier * 2 + progress * 3) * 6;
+          const flareRadius = baseRadius + waveRipple;
+          const dropY = curPose.pelvis.y + (tierFrac * 55) + Math.sin(angle * 3) * 6;
+
+          pt3D = {
+            x: curPose.pelvis.x + Math.cos(angle) * flareRadius,
+            y: dropY,
+            z: curPose.pelvis.z + Math.sin(angle) * flareRadius * 0.85
+          };
+        } else if (p.role === 'arm_left' || p.role === 'arm_right') {
+          // Slender arms: shoulder -> bicep -> elbow -> forearm -> wrist -> delicate hand
+          const isLeft = p.role === 'arm_left';
+          const aIdx = isLeft ? (p.index - 1180) : (p.index - 1380);
+          const st = aIdx / 200;
+          const angle = aIdx * 2.4;
+
+          const shoulder = isLeft ? curPose.leftShoulder : curPose.rightShoulder;
+          const elbow = isLeft ? curPose.leftElbow : curPose.rightElbow;
+          const wrist = isLeft ? curPose.leftWrist : curPose.rightWrist;
+          const hand = isLeft ? curPose.leftHand : curPose.rightHand;
+
+          if (st < 0.45) {
+            const frac = st / 0.45;
+            const r = 5.2 - frac * 1.5;
+            pt3D = sampleLimb(shoulder, elbow, frac, r, r, angle);
+          } else if (st < 0.85) {
+            const frac = (st - 0.45) / 0.4;
+            const r = 3.8 - frac * 1.4;
+            pt3D = sampleLimb(elbow, wrist, frac, r, r, angle);
+          } else {
+            // Arched fingers and delicate ballet hand
+            const frac = (st - 0.85) / 0.15;
+            const r = 2.2 - frac * 1.2;
+            pt3D = sampleLimb(wrist, hand, frac, r, r, angle);
+          }
+        } else if (p.role === 'leg_left' || p.role === 'leg_right') {
+          // Long sculpted dancer legs: thigh -> knee -> calf muscle -> ankle -> pointed toes (en pointe)
+          const isLeft = p.role === 'leg_left';
+          const lIdx = isLeft ? (p.index - 1580) : (p.index - 1820);
+          const st = lIdx / 240;
+          const angle = lIdx * 2.4;
+
+          const hip = isLeft ? curPose.leftHip : curPose.rightHip;
+          const knee = isLeft ? curPose.leftKnee : curPose.rightKnee;
+          const ankle = isLeft ? curPose.leftAnkle : curPose.rightAnkle;
+          const toe = isLeft ? curPose.leftToe : curPose.rightToe;
+
+          if (st < 0.45) {
+            // Thigh (fuller curve tapering to knee)
+            const frac = st / 0.45;
+            const r = 9.5 - frac * 4.0;
+            pt3D = sampleLimb(hip, knee, frac, r, r * 0.9, angle);
+          } else if (st < 0.85) {
+            // Sculpted calf muscle tapering to slender ankle
+            const frac = (st - 0.45) / 0.4;
+            const calfBulge = Math.sin(frac * Math.PI) * 2.8;
+            const r = (5.5 - frac * 2.4) + (frac < 0.6 ? calfBulge : 0);
+            pt3D = sampleLimb(knee, ankle, frac, r, r * 0.85, angle);
+          } else {
+            // Pointed ballet foot en pointe
+            const frac = (st - 0.85) / 0.15;
+            const r = 2.8 - frac * 1.8;
+            pt3D = sampleLimb(ankle, toe, frac, r, r * 0.8, angle);
+          }
+        } else {
+          // Ethereal stardust sparkles orbiting the dancer
+          const spIdx = p.index - 2040;
+          const orbitAngle = spIdx * 0.45 + progress * 2.5;
+          const orbitRadius = 120 + Math.sin(spIdx * 7) * 70;
+          const orbitY = (Math.sin(spIdx * 3 + progress) * 180);
+
+          pt3D = {
+            x: curPose.waist.x + Math.cos(orbitAngle) * orbitRadius,
+            y: curPose.waist.y + orbitY,
+            z: curPose.waist.z + Math.sin(orbitAngle) * orbitRadius
+          };
+        }
+
+        // Project 3D coordinate to 2D screen
+        const proj = project(pt3D);
+        p.targetX = proj.x;
+        p.targetY = proj.y;
+        p.depth = proj.depth;
+
+        // Smooth spring physics towards target position
+        p.x += (p.targetX - p.x) * 0.22;
+        p.y += (p.targetY - p.y) * 0.22;
+
+        // Interactive fluid mouse vortex & magnetic deflection
+        if (mouse.active) {
+          const dx = p.x - mouse.x;
+          const dy = p.y - mouse.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 140 && dist > 0) {
+            const force = (1 - dist / 140) * 16;
+            // Swirl + push
+            p.x += (dx / dist) * force + (-dy / dist) * (force * 0.7);
+            p.y += (dy / dist) * force + (dx / dist) * (force * 0.7);
+          }
+        }
+
+        // Draw glowing particle with 3D depth of field
+        const depthScale = Math.max(0.4, p.depth);
+        const radius = Math.max(0.6, p.baseRadius * depthScale * (p.role === 'skirt_chiffon' ? 1.15 : 1.0));
+        const alpha = Math.min(1.0, p.alpha * depthScale * (p.role === 'sparkles' ? (Math.sin(progress * 6 + i) * 0.4 + 0.6) : 0.9));
+
+        // Color selection
+        let hue = p.hue;
+        if (p.role === 'skirt_chiffon') hue = 172 + (i % 20); // Turquoise chiffon
+        else if (p.role === 'hair') hue = 188 + (i % 15);
+        else if (p.role === 'sparkles') hue = 195 + (i % 30);
+
+        ctx.fillStyle = `hsla(${hue}, 95%, 68%, ${alpha})`;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, radius, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Extra glowing bright cores for key silhouette highlights
+        if (i % 14 === 0 && depthScale > 0.95) {
+          ctx.fillStyle = `rgba(255, 255, 255, ${alpha * 0.85})`;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, radius * 0.55, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+
+      requestAnimationFrame(render);
+    }
+    render();
+
+    // Handlers
+    function handleEnroll(e) {
+      e.preventDefault();
+      document.getElementById('enrollSuccess').classList.remove('hidden');
+      setTimeout(() => {
+        document.getElementById('enrollSuccess').classList.add('hidden');
+      }, 5000);
+    }
+
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      document.getElementById('sun-icon').classList.toggle('hidden');
+      document.getElementById('moon-icon').classList.toggle('hidden');
+    });
+
+    function openVideoModal() {
+      alert('Plesna Grupa Roxanne Showreel Video — predstave, treninzi i natjecanja 2025/26.');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "Plesna Grupa Roxanne",
+  "description": "Službena stranica plesne grupe Roxanne - programi, upisi, galerija, raspored i interaktivna čestična animacija plesačice.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
