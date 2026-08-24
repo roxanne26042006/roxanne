@@ -66,7 +66,6 @@ export default function App() {
     <div className={`min-h-screen transition-colors duration-300 ${
       isDarkMode ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'
     }`}>
-      {/* Header Navigation */}
       <Navbar
         isDarkMode={isDarkMode}
         toggleDarkMode={toggleDarkMode}
@@ -74,53 +73,45 @@ export default function App() {
         onOpenEnrollment={handleOpenEnrollment}
       />
 
-      {/* Main Content Sections */}
       <main>
-        {/* Hero Section with Interactive Particle Dancer */}
         <Hero
           isDarkMode={isDarkMode}
           onOpenEnrollment={() => handleOpenEnrollment()}
           onOpenVideoModal={() => setIsVideoModalOpen(true)}
         />
 
-        {/* About Us (O nama & Tim) */}
         <AboutUs isDarkMode={isDarkMode} />
 
-        {/* Dance Programs (Plesni programi & stilovi) */}
         <Programs
           isDarkMode={isDarkMode}
           onSelectProgram={handleOpenEnrollment}
         />
 
-        {/* Schedule (Raspored treninga po danima) */}
         <Schedule
           isDarkMode={isDarkMode}
           onOpenEnrollment={() => handleOpenEnrollment()}
         />
 
-        {/* Gallery (Galerija slika & video produkcija) */}
-        <Gallery
-          isDarkMode={isDarkMode}
-          onOpenVideoModal={() => setIsVideoModalOpen(true)}
-        />
+        {/* --- GALERIJA JE SAKRIVENA ISPOD --- */}
+        {false && (
+          <Gallery
+            isDarkMode={isDarkMode}
+            onOpenVideoModal={() => setIsVideoModalOpen(true)}
+          />
+        )}
 
-        {/* Testimonials & Community */}
         <Testimonials isDarkMode={isDarkMode} />
 
-        {/* Enrollment Form (Upisnica za novu sezonu) */}
         <Enrollment
           isDarkMode={isDarkMode}
           preselectedProgramId={selectedProgramForEnroll}
         />
 
-        {/* Contact & Location & FAQ */}
         <Contact isDarkMode={isDarkMode} />
       </main>
 
-      {/* Footer with Facebook, Instagram, YouTube & Newsletter */}
       <Footer isDarkMode={isDarkMode} />
 
-      {/* Video Modal Player */}
       <VideoModal
         isOpen={isVideoModalOpen}
         onClose={() => setIsVideoModalOpen(false)}

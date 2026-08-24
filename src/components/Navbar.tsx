@@ -30,10 +30,8 @@ export const Navbar: React.FC<NavbarProps> = ({
   const navLinks = [
     { name: 'Početna', href: '#pocetna', id: 'pocetna' },
     { name: 'O nama', href: '#o-nama', id: 'o-nama' },
-    { name: 'Programi', href: '#programi', id: 'programi' },
+    { name: 'Grupe', href: '#programi', id: 'programi' }, 
     { name: 'Raspored', href: '#raspored', id: 'raspored' },
-    { name: 'Galerija', href: '#galerija', id: 'galerija' },
-    { name: 'Upisi', href: '#upisi', id: 'upisi' },
     { name: 'Kontakt', href: '#kontakt', id: 'kontakt' },
   ];
 
