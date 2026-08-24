@@ -46,16 +46,22 @@ export const Hero: React.FC<HeroProps> = ({
             {/* Main Title */}
             <div className="space-y-3">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.08] font-heading">
-                <span className="block text-slate-900 dark:text-white">Osjeti ritam.</span>
+                {/* Ovdje smo promijenili text-slate-900 u text-white */}
+                <span className="block text-white">Osjeti ritam.</span>
+                
                 <span className="block bg-gradient-to-r from-cyan-400 via-teal-300 to-sky-400 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(6,182,212,0.4)]">
                   Izrazi se kroz pokret.
                 </span>
-                <span className="block text-slate-900 dark:text-white text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-1">
+                
+                {/* Ovdje smo također promijenili text-slate-900 u text-white */}
+                <span className="block text-white text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-1">
                   Plesna grupa <span className="underline decoration-cyan-400 decoration-wavy decoration-2">Roxanne</span>
                 </span>
               </h1>
+              
+              {/* Ovdje smo promijenili text-slate-700 u text-slate-200 za bolju vidljivost opisa */}
               <p className={`text-base sm:text-lg max-w-2xl font-normal leading-relaxed ${
-                isDarkMode ? 'text-slate-300' : 'text-slate-700'
+                isDarkMode ? 'text-slate-300' : 'text-slate-200'
               }`}>
                 Vodeći plesni studio suvremenog, jazz i urbanog plesa za djecu, mlade i odrasle.
                 Pronađi svoju strast, usavrši tehniku i zapleši s nama na prestižnim pozornicama i natjecanjima.
