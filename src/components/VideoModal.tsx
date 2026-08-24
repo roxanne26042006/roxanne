@@ -23,7 +23,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose }) => {
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-ping" />
             <span className="text-sm font-bold text-white font-heading">
-              Plesna Grupa Roxanne — Službeni Showreel
+              Plesna udruga Roxanne — Službeni Showreel
             </span>
           </div>
           <button

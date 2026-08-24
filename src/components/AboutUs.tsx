@@ -68,7 +68,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({ isDarkMode }) => {
             <div className="relative rounded-3xl overflow-hidden border border-cyan-500/30 shadow-[0_0_30px_rgba(6,182,212,0.2)] group">
               <img
                 src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1000&q=80"
-                alt="Plesna grupa Roxanne plesačice na sceni"
+                alt="Plesna udruga Roxanne plesačice na sceni"
                 className="w-full h-[440px] object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
@@ -91,7 +91,7 @@ export const AboutUs: React.FC<AboutUsProps> = ({ isDarkMode }) => {
               Naš put: Od lokalne dvorane do europskih pozornica
             </h3>
             <p className={`text-base leading-relaxed ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
-              Plesna grupa Roxanne djeluje već više od 16 godina kao sinonim za inovativnost u plesnoj umjetnosti. Kroz naše dvorane prošlo je više od 2.000 plesača, od kojih su mnogi danas profesionalni izvođači, treneri i koreografi.
+              Plesna udruga Roxanne djeluje već više od 16 godina kao sinonim za inovativnost u plesnoj umjetnosti. Kroz naše dvorane prošlo je više od 2.000 plesača, od kojih su mnogi danas profesionalni izvođači, treneri i koreografi.
             </p>
             <p className={`text-base leading-relaxed ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
               Njegujemo raznolikost plesnih stilova: od klasičnih temelja i modernog jazza, preko fluidnog suvremenog plesa, do energičnog hip hopa i scenskog show dancea. Za svakog polaznika kreiramo individualni put napretka.

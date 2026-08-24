@@ -57,7 +57,7 @@ export const Footer: React.FC<FooterProps> = ({ isDarkMode }) => {
                   href="https://facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Plesna grupa Roxanne Facebook"
+                  aria-label="Plesna udruga Roxanne Facebook"
                   className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-cyan-400 flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:shadow-[0_0_15px_rgba(6,182,212,0.6)] transition-all duration-300 group cursor-pointer"
                 >
                   <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -70,7 +70,7 @@ export const Footer: React.FC<FooterProps> = ({ isDarkMode }) => {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Plesna grupa Roxanne Instagram"
+                  aria-label="Plesna udruga Roxanne Instagram"
                   className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-cyan-400 flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:shadow-[0_0_15px_rgba(6,182,212,0.6)] transition-all duration-300 group cursor-pointer"
                 >
                   <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -83,7 +83,7 @@ export const Footer: React.FC<FooterProps> = ({ isDarkMode }) => {
                   href="https://youtube.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Plesna grupa Roxanne YouTube kanal"
+                  aria-label="Plesna udruga Roxanne YouTube kanal"
                   className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-cyan-400 flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:shadow-[0_0_15px_rgba(6,182,212,0.6)] transition-all duration-300 group cursor-pointer"
                 >
                   <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -191,7 +191,7 @@ export const Footer: React.FC<FooterProps> = ({ isDarkMode }) => {
         {/* Bottom bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div className="flex items-center gap-1">
-            <span>© {new Date().getFullYear()} Plesna Grupa Roxanne. Sva prava pridržana.</span>
+            <span>© {new Date().getFullYear()} Plesna udruga Roxanne. Sva prava pridržana.</span>
           </div>
 
           <div className="flex items-center gap-6">

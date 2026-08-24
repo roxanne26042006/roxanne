@@ -71,4 +71,4 @@ export default function App() {
       <VideoModal isOpen={isVideoModalOpen} onClose={() => setIsVideoModalOpen(false)} />
     </div>
   );
-}
+}  
