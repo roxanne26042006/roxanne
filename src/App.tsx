@@ -25,15 +25,13 @@ export default function App() {
     localStorage.setItem('roxanne-theme', isDarkMode ? 'dark' : 'light');
     if (isDarkMode) {
       document.documentElement.classList.add('dark');
-      document.documentElement.classList.remove('light');
     } else {
       document.documentElement.classList.remove('dark');
-      document.documentElement.classList.add('light');
     }
   }, [isDarkMode]);
 
   useEffect(() => {
-    const sections = ['pocetna', 'o-nama', 'programi', 'raspored', 'galerija', 'upisi', 'kontakt'];
+    const sections = ['pocetna', 'o-nama', 'programi', 'raspored', 'upisi', 'kontakt'];
     const handleScroll = () => {
       const scrollY = window.scrollY + 200;
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -48,74 +46,29 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleDarkMode = () => {
-    setIsDarkMode((prev) => !prev);
-  };
-
   const handleOpenEnrollment = (programId?: string) => {
-    if (programId) {
-      setSelectedProgramForEnroll(programId);
-    }
-    const enrollElem = document.getElementById('upisi');
-    if (enrollElem) {
-      enrollElem.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (programId) setSelectedProgramForEnroll(programId);
+    document.getElementById('upisi')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <div className={`min-h-screen transition-colors duration-300 ${
-      isDarkMode ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'
-    }`}>
-      <Navbar
-        isDarkMode={isDarkMode}
-        toggleDarkMode={toggleDarkMode}
-        activeSection={activeSection}
-        onOpenEnrollment={handleOpenEnrollment}
-      />
-
+    <div className={`min-h-screen transition-colors duration-300 ${isDarkMode ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'}`}>
+      <Navbar isDarkMode={isDarkMode} toggleDarkMode={() => setIsDarkMode(!isDarkMode)} activeSection={activeSection} onOpenEnrollment={handleOpenEnrollment} />
       <main>
-        <Hero
-          isDarkMode={isDarkMode}
-          onOpenEnrollment={() => handleOpenEnrollment()}
-          onOpenVideoModal={() => setIsVideoModalOpen(true)}
-        />
-
+        <Hero isDarkMode={isDarkMode} onOpenEnrollment={() => handleOpenEnrollment()} onOpenVideoModal={() => setIsVideoModalOpen(true)} />
         <AboutUs isDarkMode={isDarkMode} />
-
-        <Programs
-          isDarkMode={isDarkMode}
-          onSelectProgram={handleOpenEnrollment}
-        />
-
-        <Schedule
-          isDarkMode={isDarkMode}
-          onOpenEnrollment={() => handleOpenEnrollment()}
-        />
-
-        {/* --- GALERIJA JE SAKRIVENA ISPOD --- */}
-        {false && (
-          <Gallery
-            isDarkMode={isDarkMode}
-            onOpenVideoModal={() => setIsVideoModalOpen(true)}
-          />
-        )}
-
+        <Programs isDarkMode={isDarkMode} onSelectProgram={handleOpenEnrollment} />
+        <Schedule isDarkMode={isDarkMode} onOpenEnrollment={() => handleOpenEnrollment()} />
+        
+        {/* Galerija je sakrivena */}
+        {false && <Gallery isDarkMode={isDarkMode} onOpenVideoModal={() => setIsVideoModalOpen(true)} />}
+        
         <Testimonials isDarkMode={isDarkMode} />
-
-        <Enrollment
-          isDarkMode={isDarkMode}
-          preselectedProgramId={selectedProgramForEnroll}
-        />
-
+        <Enrollment isDarkMode={isDarkMode} preselectedProgramId={selectedProgramForEnroll} />
         <Contact isDarkMode={isDarkMode} />
       </main>
-
       <Footer isDarkMode={isDarkMode} />
-
-      <VideoModal
-        isOpen={isVideoModalOpen}
-        onClose={() => setIsVideoModalOpen(false)}
-      />
+      <VideoModal isOpen={isVideoModalOpen} onClose={() => setIsVideoModalOpen(false)} />
     </div>
   );
 }
