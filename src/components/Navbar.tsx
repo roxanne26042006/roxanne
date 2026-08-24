@@ -41,7 +41,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           
           <a href="#pocetna" className="flex items-center gap-2.5 group transition-transform duration-200 hover:scale-105">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 via-teal-500 to-blue-600 flex items-center justify-center shadow-[0_0_15px_rgba(6,182,212,0.6)] overflow-hidden">
-              <img src={logoImg} alt="Logo" className="w-8 h-8 object-contain" />
+              <img src={logoImg} alt="Roxanne Logo" className="w-8 h-8 object-contain" />
             </div>
             <div className="flex flex-col">
               <span className="text-2xl font-extrabold tracking-wider font-heading bg-gradient-to-r from-cyan-400 via-teal-300 to-sky-400 bg-clip-text text-transparent">ROXANNE</span>
